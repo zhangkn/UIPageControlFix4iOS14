@@ -33,7 +33,15 @@
  中英文lab,用于切换语言：处理切换中英文语言的动作事件
 
  */
-@property (strong, nonatomic) UILabel *languageLab;
+@property (weak, nonatomic) UILabel *languageLab;
+
+/**
+ 用于测试指定参数顺序： 在%和@中间加上1$,2$等等就可以啦，数字代表参数的顺序。
+
+
+ */
+@property (weak, nonatomic) UILabel *FORMATLab;
+
 
 @end
 
@@ -47,6 +55,22 @@
 
     self.view.backgroundColor = UIColor.whiteColor;
     
+    
+    
+    self.FORMATLab.text =   [NSString stringWithFormat:KNLocal(@"FORMAT", nil), @"csdn", @"https://kunnan.blog.csdn.net/article/details/103733872"];
+    
+    
+    
+    
+    
+    
+
+    
+    [self testUIPageControl];
+}
+
+
+- (void)testUIPageControl{
     
     
     UIPageControl *pc = [[UIPageControl alloc] initWithFrame:CGRectMake(10, 100, 375, 30)];
@@ -72,17 +96,67 @@
     
     pc.currentPage = 0;
 //
+
 }
 
 
 
 
+- (UILabel *)FORMATLab{
+    if (!_FORMATLab) {
+        UILabel *tmp = [[UILabel alloc]init];
+        
+        _FORMATLab = tmp;
+        
+        tmp.textColor = rgb(51,51,51);
+        
+        tmp.font = kBoldFont(15);
+        
+        tmp.numberOfLines = 0;
+        
+        
+        tmp.textAlignment = NSTextAlignmentCenter;
+        
+
+        
+        
+        [self.view addSubview:tmp];
+        
+        __weak __typeof__(self) weakSelf = self;
+
+        [tmp mas_makeConstraints:^(MASConstraintMaker *make) {
+           
+            make.centerY.equalTo(weakSelf.view).offset(kAdjustRatio(-80));
+            
+
+            make.centerX.equalTo(weakSelf.view).offset(-kAdjustRatio(0));
+            
+            make.left.equalTo(weakSelf.view).offset(-kAdjustRatio(10));
+            make.right.equalTo(weakSelf.view).offset(-kAdjustRatio(10));
+
+            
+//            make.size.mas_equalTo(CGSizeMake(kAdjustRatio(100), kAdjustRatio(40)));
+                        
+            
+            
+        }];
+        
+        
+        
+    }
+    return _FORMATLab;
+}
 
 
 
 - (UILabel *)languageLab{
     if (!_languageLab) {
-        _languageLab = [[UILabel alloc]init];
+        UILabel *tmp = [[UILabel alloc]init];
+        
+        
+        
+        _languageLab = tmp;
+        
         _languageLab.textColor = rgb(51,51,51);
         
         _languageLab.font = kBoldFont(15);

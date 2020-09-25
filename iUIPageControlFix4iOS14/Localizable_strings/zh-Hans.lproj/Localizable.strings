@@ -2,10 +2,10 @@
   Localizable.strings
   iUIPageControlFix4iOS14
 
- 指定参数顺序
+ 指定参数顺序： 在%和@中间加上1$,2$等等就可以啦，数字代表参数的顺序。
+
  
  str = [NSString stringWithFormat:NSLocalizedString(@"FORMAT", nil), xxx, xxx];
- 在%和@中间加上1$,2$等等就可以啦，数字代表参数的顺序。
  
 */
 

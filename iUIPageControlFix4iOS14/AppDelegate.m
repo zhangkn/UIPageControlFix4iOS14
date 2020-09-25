@@ -62,11 +62,11 @@
         [[KNLanguageManager defaultManager] changeLanguageType: KNLanguageTypeEnglish];
         
 
-        NSLog(@"当前位英文版本");
+        NSLog(@"当前是英文版本");
         
     }else{
 //        _titleLab.font = kPingFangFont(12);
-        NSLog(@"当前位中文版本");
+        NSLog(@"当前是中文版本");
         [[KNLanguageManager defaultManager] changeLanguageType: KNLanguageTypeChineseSimple];
 
         

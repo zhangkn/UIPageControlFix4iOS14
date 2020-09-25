@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#define KNLocal(x, ...) KNLocalizedString(x, nil)
 
 #define KNLocalizedString(key, comment)               KNLocalizedStringFromTable(key, @"Localizable", nil)
 #define KNLocalizedStringFromTable(key, tbl, comment) [[KNLanguageManager defaultManager] stringWithKey:key table:tbl]

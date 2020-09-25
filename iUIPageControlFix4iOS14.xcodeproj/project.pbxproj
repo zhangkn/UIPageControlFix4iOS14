@@ -85,7 +85,7 @@
 				0456093E251D8F0800E5F975 /* tool */,
 				0456093C251D8CEB00E5F975 /* main */,
 				04560930251D82F500E5F975 /* LanguageManager */,
-				04560923251D805700E5F975 /* Localizable.strings */,
+				04560923251D805700E5F975 /* Localizable_strings */,
 				0416A881251C45A500BD177C /* Fix4iOS14 */,
 				0416A867251C42E600BD177C /* AppDelegate.h */,
 				0416A868251C42E600BD177C /* AppDelegate.m */,
@@ -110,12 +110,12 @@
 			path = Fix4iOS14;
 			sourceTree = "<group>";
 		};
-		04560923251D805700E5F975 /* Localizable.strings */ = {
+		04560923251D805700E5F975 /* Localizable_strings */ = {
 			isa = PBXGroup;
 			children = (
 				0456092A251D80D700E5F975 /* Localizable.strings */,
 			);
-			path = Localizable.strings;
+			path = Localizable_strings;
 			sourceTree = "<group>";
 		};
 		04560930251D82F500E5F975 /* LanguageManager */ = {

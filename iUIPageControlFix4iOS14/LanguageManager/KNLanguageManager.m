@@ -83,7 +83,7 @@ static NSString * const kLanguageSet = @"kLanguageSet";
     [self resetBundle];
 
     
-    NSLog(@"当前的语言    HZLanguageTypeSystem HZLanguageTypeEnglish HZLanguageTypeChineseSimple：%lu",(unsigned long)self.languageType);
+    NSLog(@"当前的语言    LanguageTypeSystem LanguageTypeEnglish LanguageTypeChineseSimple：%lu",(unsigned long)self.languageType);
     
     return self;
 }
@@ -255,25 +255,6 @@ static NSString * const kLanguageSet = @"kLanguageSet";
 }
 
 
-// 设置当前语言
-//+ (void)setUserlanguage:(NSString *)language {
-//    if ([[GHLLocalizable userLanguage] isEqualToString:language]) return;
-//    [[NSUserDefaults standardUserDefaults] setObject:language forKey:GHLLanguageKey];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-//    [NSBundle setLanguage:language];
-//    [[NSNotificationCenter defaultCenter] postNotificationName:GHLNotificationLanguageChanged object:currentLanguage];
-//}
-//
-//// 获取应用当前语言
-//+ (NSString *)userLanguage {
-//    NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:GHLLanguageKey];
-//    if (language.length <= 0) {
-//        NSArray *languages = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
-//        return languages.firstObject;
-//    }
-//    return language;
-//}
-//
 
 
 + (BOOL )isEN{
