@@ -4,6 +4,8 @@
 //
 //  Created by mac on 2020/9/24.
 //
+#import "KNLanguageManager.h"
+#import "ViewController.h"
 
 #import "AppDelegate.h"
 
@@ -16,25 +18,65 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setDefaultManagerLanguageManager];
+    
+    [self setupwindow];//
+    
+
+    
     return YES;
 }
 
+- (void)setupwindow{
+    
+    self.window = [[UIWindow alloc]init];
+    self.window.frame = [[UIScreen mainScreen]bounds];
+    
+    
+    ViewController *VC = [[ViewController alloc]init];
 
-#pragma mark - UISceneSession lifecycle
+//    HWNavigationController *NA = [[HWNavigationController alloc]initWithRootViewController:VC];
+//    self.rootViewController = vc;
 
 
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+    self.window.rootViewController = VC;
+    
+
+    [self.window makeKeyAndVisible];
+    
+//
+    
 }
 
 
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+
+//AppDelegate: 设置默认的语言
+
+
+- (void)setDefaultManagerLanguageManager{
+    
+
+    if([KNLanguageManager isEN] ){
+        
+//
+        [[KNLanguageManager defaultManager] changeLanguageType: KNLanguageTypeEnglish];
+        
+
+        NSLog(@"当前位英文版本");
+        
+    }else{
+//        _titleLab.font = kPingFangFont(12);
+        NSLog(@"当前位中文版本");
+        [[KNLanguageManager defaultManager] changeLanguageType: KNLanguageTypeChineseSimple];
+
+        
+    }
+
 }
+
+
+
+
 
 
 @end

@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  iUIPageControlFix4iOS14
+
+ 指定参数顺序
+*/
+
+"FORMAT" = "I am %2$@ from '%1$@'";
+
