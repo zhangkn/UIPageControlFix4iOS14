@@ -17,6 +17,7 @@
 		0416A884251C45B800BD177C /* UIPageControl+Fix4iOS14.m in Sources */ = {isa = PBXBuildFile; fileRef = 0416A883251C45B800BD177C /* UIPageControl+Fix4iOS14.m */; };
 		04560928251D80D700E5F975 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0456092A251D80D700E5F975 /* Localizable.strings */; };
 		04560933251D830600E5F975 /* KNLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04560932251D830600E5F975 /* KNLanguageManager.m */; };
+		04560941251D8F1D00E5F975 /* KNchangeRootVCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04560940251D8F1D00E5F975 /* KNchangeRootVCTool.m */; };
 		08CD2073EE8F8FFDA3F0BF60 /* libPods-iUIPageControlFix4iOS14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA7E967B7A9C2AADB8E6ABE /* libPods-iUIPageControlFix4iOS14.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		0456092E251D80EB00E5F975 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		04560931251D830600E5F975 /* KNLanguageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNLanguageManager.h; sourceTree = "<group>"; };
 		04560932251D830600E5F975 /* KNLanguageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNLanguageManager.m; sourceTree = "<group>"; };
+		0456093F251D8F1D00E5F975 /* KNchangeRootVCTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNchangeRootVCTool.h; sourceTree = "<group>"; };
+		04560940251D8F1D00E5F975 /* KNchangeRootVCTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNchangeRootVCTool.m; sourceTree = "<group>"; };
 		1FA7E967B7A9C2AADB8E6ABE /* libPods-iUIPageControlFix4iOS14.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iUIPageControlFix4iOS14.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE39AEF2D3BE397AF13206A /* Pods-iUIPageControlFix4iOS14.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iUIPageControlFix4iOS14.debug.xcconfig"; path = "Target Support Files/Pods-iUIPageControlFix4iOS14/Pods-iUIPageControlFix4iOS14.debug.xcconfig"; sourceTree = "<group>"; };
 		A16CF6C4961D28453F99ED72 /* Pods-iUIPageControlFix4iOS14.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iUIPageControlFix4iOS14.release.xcconfig"; path = "Target Support Files/Pods-iUIPageControlFix4iOS14/Pods-iUIPageControlFix4iOS14.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 		0416A866251C42E600BD177C /* iUIPageControlFix4iOS14 */ = {
 			isa = PBXGroup;
 			children = (
+				0456093E251D8F0800E5F975 /* tool */,
+				0456093C251D8CEB00E5F975 /* main */,
 				04560930251D82F500E5F975 /* LanguageManager */,
 				04560923251D805700E5F975 /* Localizable.strings */,
 				0416A881251C45A500BD177C /* Fix4iOS14 */,
@@ -86,8 +91,7 @@
 				0416A868251C42E600BD177C /* AppDelegate.m */,
 				0416A86A251C42E600BD177C /* SceneDelegate.h */,
 				0416A86B251C42E600BD177C /* SceneDelegate.m */,
-				0416A86D251C42E600BD177C /* ViewController.h */,
-				0416A86E251C42E600BD177C /* ViewController.m */,
+				04560936251D867600E5F975 /* VC */,
 				0416A870251C42E600BD177C /* Main.storyboard */,
 				0416A873251C42EA00BD177C /* Assets.xcassets */,
 				0416A875251C42EA00BD177C /* LaunchScreen.storyboard */,
@@ -121,6 +125,31 @@
 				04560932251D830600E5F975 /* KNLanguageManager.m */,
 			);
 			path = LanguageManager;
+			sourceTree = "<group>";
+		};
+		04560936251D867600E5F975 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				0416A86D251C42E600BD177C /* ViewController.h */,
+				0416A86E251C42E600BD177C /* ViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		0456093C251D8CEB00E5F975 /* main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		0456093E251D8F0800E5F975 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				0456093F251D8F1D00E5F975 /* KNchangeRootVCTool.h */,
+				04560940251D8F1D00E5F975 /* KNchangeRootVCTool.m */,
+			);
+			path = tool;
 			sourceTree = "<group>";
 		};
 		36D57458B043AE5E715E96D7 /* Frameworks */ = {
@@ -244,6 +273,7 @@
 				0416A87A251C42EA00BD177C /* main.m in Sources */,
 				04560933251D830600E5F975 /* KNLanguageManager.m in Sources */,
 				0416A86C251C42E600BD177C /* SceneDelegate.m in Sources */,
+				04560941251D8F1D00E5F975 /* KNchangeRootVCTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

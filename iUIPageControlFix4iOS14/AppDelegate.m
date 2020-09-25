@@ -36,10 +36,10 @@
     ViewController *VC = [[ViewController alloc]init];
 
 //    HWNavigationController *NA = [[HWNavigationController alloc]initWithRootViewController:VC];
-//    self.rootViewController = vc;
+    UINavigationController *NA = [[UINavigationController alloc]initWithRootViewController:VC];
 
 
-    self.window.rootViewController = VC;
+    self.window.rootViewController = NA;
     
 
     [self.window makeKeyAndVisible];
@@ -73,8 +73,6 @@
     }
 
 }
-
-
 
 
 
