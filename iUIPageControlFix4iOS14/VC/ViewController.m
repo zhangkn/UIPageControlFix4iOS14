@@ -265,7 +265,7 @@
                     break;
             }
             
-            // 刷新界面
+            // 销毁根控制器，重新进入一次,刷新界面
             [ KNchangeRootVCTool rootViewController4nil];
             
             
